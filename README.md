@@ -1,5 +1,5 @@
 # AMGHud
-**AMGHUD is a HUD plugin for Minecraft.**
+**AMGHud is a HUD plugin for Minecraft.**
 
 **AMGHud is based on the qb-hud script for fivem but made for Minecraft.**
 
