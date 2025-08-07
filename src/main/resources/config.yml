@@ -1,0 +1,46 @@
+# AMGHud Configuration
+
+# Debug mode - enables additional logging
+debug: false
+
+# BossBar HUD Configuration
+bossbar:
+  enabled: true
+  update-interval: 10 # ticks (20 ticks = 1 second)
+  format: "&6Money: &e%amgcore_money% &7| &6Job: &e%amgcore_job% &7| &6Ping: &e%player_ping%ms"
+  color: RED # PINK, BLUE, RED, GREEN, YELLOW, PURPLE, WHITE
+  style: SOLID # SOLID, SEGMENTED_6, SEGMENTED_10, SEGMENTED_12, SEGMENTED_20
+  flags: [] # BossBar flags (CREATE_FOG, DARKEN_SKY, PLAY_BOSS_MUSIC)
+  permission: "amghud.bossbar" # Permission required to see the bossbar
+
+# Tab Scoreboard Configuration
+tab:
+  enabled: true
+  update-interval: 20 # ticks (20 ticks = 1 second)
+  server-name: "&x&f&b&7&9&0&0&lM&x&f&b&8&5&0&0&ly &x&f&c&9&2&0&0&lS&x&f&c&9&e&0&0&le&x&f&c&a&a&0&0&lr&x&f&d&b&7&0&0&lv&x&f&d&c&3&0&0&le&x&f&d&c&f&0&0&lr"
+  header: |-
+    &8&m                                                    
+    %server_name%
+    &7Players Online: &e%server_online%&7/&e%server_max_players% &8| &7TPS: &e%server_tps%
+    &8&m                                                    
+  footer: |-
+    &8&m                                                    
+    &7Job: &e%amgcore_job% &8| &7Money: &e%amgcore_money%
+    &7Ping: &e%player_ping%ms
+    &8&m                                                    
+  player-format: "%luckperms_prefix%%player_name% &8[&e%player_ping%ms&8]"
+  sort-by: NAME # NAME, PING, GROUP
+  permission: "amghud.tab" # Permission required to see the tab list
+  hide-default-name: true # Whether to hide the default player name in tab list
+  collision-rule: NEVER # ALWAYS, NEVER, PUSH_OTHER_TEAMS, PUSH_OWN_TEAM
+  name-tag-visibility: NEVER # ALWAYS, NEVER, HIDE_FOR_OTHER_TEAMS, HIDE_FOR_OWN_TEAM
+  remove-vanilla-tab: true # Whether to remove the vanilla tab list completely
+
+# Job Title Localization
+job-titles:
+  unemployed: "&7Unemployed"
+  police: "&1Police Officer"
+  medic: "&cMedic"
+  mechanic: "&6Mechanic"
+  taxi: "&eTaxi Driver"
+  lawyer: "&9Lawyer"

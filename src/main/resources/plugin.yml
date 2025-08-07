@@ -1,0 +1,33 @@
+name: AMGHud
+version: '1.0'
+main: amg.plugins.aMGHud.AMGHud
+api-version: '1.21'
+softdepend: [AMGCore, PlaceholderAPI, LuckPerms]
+
+commands:
+  amghud:
+    description: Main command for AMGHud plugin
+    usage: /amghud [reload]
+    permission: amghud.admin
+
+permissions:
+  amghud.*:
+    description: Gives access to all AMGHud commands
+    default: op
+    children:
+      amghud.admin: true
+      amghud.bossbar: true
+      amghud.tab: true
+      amghud.chat.color: true
+  amghud.admin:
+    description: Allows reloading the plugin configuration
+    default: op
+  amghud.bossbar:
+    description: Allows seeing the bossbar HUD
+    default: true
+  amghud.tab:
+    description: Allows seeing the tab scoreboard
+    default: true
+  amghud.chat.color:
+    description: Allows using color codes in chat
+    default: op
